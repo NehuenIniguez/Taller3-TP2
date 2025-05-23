@@ -7,7 +7,13 @@ public class Movimiento : MonoBehaviour
     pero al tocar la pantalla podemos frenar dicho movimiento*/
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
-    public float movimientoDistancia = 1500f;
+    public float movimientoDistancia = 5f; // Usá una unidad razonable, no 1500f
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -15,48 +21,35 @@ public class Movimiento : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            // Al tocar la pantalla
             if (touch.phase == TouchPhase.Began)
-            {
                 startTouchPosition = touch.position;
-            }
-
-            // Al levantar el dedo
             else if (touch.phase == TouchPhase.Ended)
-            {
                 endTouchPosition = touch.position;
-            }
         }
-        
     }
+
     void FixedUpdate()
     {
         Vector2 swipe = endTouchPosition - startTouchPosition;
 
         if (swipe.magnitude < 50f) return;
 
-
         swipe.Normalize();
+        Vector2 direction = Vector2.zero;
 
         if (Vector2.Dot(swipe, Vector2.up) > 0.7f)
-        {
-            Debug.Log("Swipe hacia arriba");
-            transform.position += Vector3.up * movimientoDistancia * Time.fixedDeltaTime;
-        }
+            direction = Vector2.up;
         else if (Vector2.Dot(swipe, Vector2.down) > 0.7f)
-        {
-            Debug.Log("Swipe hacia abajo");
-            transform.position += Vector3.down * movimientoDistancia * Time.fixedDeltaTime;
-        }
+            direction = Vector2.down;
         else if (Vector2.Dot(swipe, Vector2.left) > 0.7f)
-        {
-            Debug.Log("Swipe a la izquierda");
-            transform.position += Vector3.left * movimientoDistancia * Time.fixedDeltaTime;
-        }
+            direction = Vector2.left;
         else if (Vector2.Dot(swipe, Vector2.right) > 0.7f)
+            direction = Vector2.right;
+
+        if (direction != Vector2.zero)
         {
-            Debug.Log("Swipe a la derecha");
-            transform.position += Vector3.right * movimientoDistancia * Time.fixedDeltaTime;
+            Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
+            rb.MovePosition(nuevaPosicion);
         }
     }
 

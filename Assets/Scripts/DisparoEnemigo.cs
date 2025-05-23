@@ -8,9 +8,9 @@ public class DisparoEnemigo : MonoBehaviour
     [SerializeField] private float tiempoEntreDisapro;
     [SerializeField] private float velocidad;
 
-    void Update()
+    void Start()
     {
-        InvokeRepeating(nameof(Disparar), 0f, tiempoEntreDisapro);
+        InvokeRepeating(nameof(Disparar), 0f, tiempoEntreDisapro);   
     }
 
     public void Disparar()
