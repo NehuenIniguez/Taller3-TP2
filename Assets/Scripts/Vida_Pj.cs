@@ -11,7 +11,7 @@ public class Vida_Pj : MonoBehaviour
     }
 
 
-    public void TomarDaño(int danio)
+    public void TomarDanio(int danio)
     {
         vidaActual -= danio;
         if (vidaActual <= 0)
