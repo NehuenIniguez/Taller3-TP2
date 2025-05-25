@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
+    public GameObject Opciones;
+    
     /*void Start()
     {
         GameObject puntos = GameObject.FindWithTag("Puntos");
