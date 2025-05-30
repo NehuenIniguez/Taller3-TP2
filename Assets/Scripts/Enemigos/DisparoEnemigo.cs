@@ -15,7 +15,7 @@ public class DisparoEnemigo : MonoBehaviour
 
     public void Disparar()
     {
-        GameObject bala = Instantiate(Bala, controlador.position, Quaternion.identity);
+        GameObject bala = Instantiate(Bala, controlador.position, controlador.rotation);
         Rigidbody2D rb = bala.GetComponent<Rigidbody2D>();
         if (rb != null)
         {

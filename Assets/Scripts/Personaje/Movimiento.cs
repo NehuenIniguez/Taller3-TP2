@@ -4,12 +4,14 @@ public class Movimiento : MonoBehaviour
 {
     /*basicamente el escript maneja el movimiento del personaje, al detectar un swipe en la pantalla devuelve un valor, 
     dicho valor multiplicado por el tiempo y la direccion del vector 3 nos da como resultado el movimiento, 
-    pero al tocar la pantalla podemos frenar dicho movimiento*/
+    pero al tocar la pantalla podemos frenar dicho movimiento
+    Le agrego que cuando el personaje se mueva la escena (en realidad los enemigos) se hagan mas lentos*/
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     public float movimientoDistancia = 5f; // Usá una unidad razonable, no 1500f
     private Rigidbody2D rb;
-
+    public bool estaMoviendo = false; // ← flag para enemigos
+    public float duracionMovimiento = 0.3f; // cuanto tiempo "dura" el swipe
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +52,17 @@ public class Movimiento : MonoBehaviour
         {
             Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
             rb.MovePosition(nuevaPosicion);
+
+            // Activo el flag para que los enemigos se muevan más lento
+            estaMoviendo = true;
+            CancelInvoke(nameof(DetenerMovimiento));
+            Invoke(nameof(DetenerMovimiento), duracionMovimiento);
         }
+
+    }
+    void DetenerMovimiento()
+    {
+        estaMoviendo = false;
     }
 
 

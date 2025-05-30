@@ -17,6 +17,7 @@ public class CambioEscena : MonoBehaviour
     public void Selector()
     {
         SceneManager.LoadScene("LevelSelector");
+        Time.timeScale = 1f;
      }
     public void LevelUno()
     {
