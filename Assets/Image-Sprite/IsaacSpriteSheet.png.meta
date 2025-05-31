@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 82390bd2d3683c746ab91ebe75c4f928
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7497011034101957558
+    second: IsaacSpriteSheet_0
+  - first:
+      213: 8953528051585024697
+    second: IsaacSpriteSheet_1
+  - first:
+      213: -337259123401902822
+    second: IsaacSpriteSheet_2
+  - first:
+      213: -6614834151855864920
+    second: IsaacSpriteSheet_3
+  - first:
+      213: -1775370177786549158
+    second: IsaacSpriteSheet_4
+  - first:
+      213: -1528604545960272066
+    second: IsaacSpriteSheet_5
+  - first:
+      213: 7292275924092074568
+    second: IsaacSpriteSheet_6
+  - first:
+      213: -477876791162060914
+    second: IsaacSpriteSheet_7
+  - first:
+      213: -1556028960953212550
+    second: IsaacSpriteSheet_8
+  - first:
+      213: 5123896729424267505
+    second: IsaacSpriteSheet_9
+  - first:
+      213: -3327605168064434470
+    second: IsaacSpriteSheet_10
+  - first:
+      213: -6887092429121862925
+    second: IsaacSpriteSheet_11
+  - first:
+      213: 7060017982773575454
+    second: IsaacSpriteSheet_12
+  - first:
+      213: -2312827864144564901
+    second: IsaacSpriteSheet_13
+  - first:
+      213: 8804489933467684524
+    second: IsaacSpriteSheet_14
+  - first:
+      213: -7703843900838206320
+    second: IsaacSpriteSheet_15
+  - first:
+      213: 4133905037327022088
+    second: IsaacSpriteSheet_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3c4dc80dbba0860800000000000000
+      internalID: 7497011034101957558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b288393352514c70800000000000000
+      internalID: 8953528051585024697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15be583d90d15bf0800000000000000
+      internalID: -337259123401902822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a34282c2636334a0800000000000000
+      internalID: -6614834151855864920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 6
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ce538ca3e9c57e0800000000000000
+      internalID: -1775370177786549158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f9dfba34e49cae0800000000000000
+      internalID: -1528604545960272066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 6
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a34ab115e533560800000000000000
+      internalID: 7292275924092074568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8fb160279d3e59f0800000000000000
+      internalID: -477876791162060914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71e92a77efd76ae0800000000000000
+      internalID: -1556028960953212550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f88e178decbb1740800000000000000
+      internalID: 5123896729424267505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adee3c4eab8f1d1d0800000000000000
+      internalID: -3327605168064434470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2c8e2dce12c60a0800000000000000
+      internalID: -6887092429121862925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 5
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fb61323f83af160800000000000000
+      internalID: 7060017982773575454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 5
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5da90bbf4f27efd0800000000000000
+      internalID: -2312827864144564901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 5
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae08d042f4df2a70800000000000000
+      internalID: 8804489933467684524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 5
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094aa75f9c2761590800000000000000
+      internalID: -7703843900838206320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IsaacSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 6
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8083315aab49e5930800000000000000
+      internalID: 4133905037327022088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IsaacSpriteSheet_0: 7497011034101957558
+      IsaacSpriteSheet_1: 8953528051585024697
+      IsaacSpriteSheet_10: -3327605168064434470
+      IsaacSpriteSheet_11: -6887092429121862925
+      IsaacSpriteSheet_12: 7060017982773575454
+      IsaacSpriteSheet_13: -2312827864144564901
+      IsaacSpriteSheet_14: 8804489933467684524
+      IsaacSpriteSheet_15: -7703843900838206320
+      IsaacSpriteSheet_16: 4133905037327022088
+      IsaacSpriteSheet_2: -337259123401902822
+      IsaacSpriteSheet_3: -6614834151855864920
+      IsaacSpriteSheet_4: -1775370177786549158
+      IsaacSpriteSheet_5: -1528604545960272066
+      IsaacSpriteSheet_6: 7292275924092074568
+      IsaacSpriteSheet_7: -477876791162060914
+      IsaacSpriteSheet_8: -1556028960953212550
+      IsaacSpriteSheet_9: 5123896729424267505
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
