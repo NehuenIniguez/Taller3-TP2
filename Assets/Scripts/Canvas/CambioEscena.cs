@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class CambioEscena : MonoBehaviour
 {
     public GameObject Opciones;
-    
+
     /*void Start()
     {
         GameObject puntos = GameObject.FindWithTag("Puntos");
@@ -13,6 +13,7 @@ public class CambioEscena : MonoBehaviour
     public void volverMenu()
     {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
     public void Selector()
     {
@@ -22,25 +23,31 @@ public class CambioEscena : MonoBehaviour
     public void LevelUno()
     {
         SceneManager.LoadScene("SampleScene"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
     public void LevelDos()
     {
         SceneManager.LoadScene("Level2"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
     public void LevelTres()
     {
         SceneManager.LoadScene("Level3"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
     public void LevelCuatro()
     {
         SceneManager.LoadScene("Level4"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
     public void LevelCinco()
     {
         SceneManager.LoadScene("Level5"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
         public void LevelSeis()
     { 
         SceneManager.LoadScene("Level6"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
     }
 }
