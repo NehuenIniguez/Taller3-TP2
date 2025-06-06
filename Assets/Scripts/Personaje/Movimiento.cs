@@ -12,9 +12,12 @@ public class Movimiento : MonoBehaviour
     private Rigidbody2D rb;
     public bool estaMoviendo = false; // ← flag para enemigos
     public float duracionMovimiento = 0.3f; // cuanto tiempo "dura" el swipe
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+       
     }
 
     void Update()

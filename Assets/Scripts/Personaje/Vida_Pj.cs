@@ -6,6 +6,7 @@ public class Vida_Pj : MonoBehaviour
     [SerializeField] private float vidaMaxima = 3;
     private float vidaActual;
     public GameObject panelMuerte;
+    [SerializeField] private Transform spawn;
     
     void Start()
     {
@@ -16,6 +17,7 @@ public class Vida_Pj : MonoBehaviour
     public void TomarDanio(float danio)
     {
         vidaActual -= danio;
+        transform.position = spawn.position;
         if (vidaActual <= 0)
         {
             Destroy(gameObject);

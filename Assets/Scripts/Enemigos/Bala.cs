@@ -5,12 +5,14 @@ public class Bala : MonoBehaviour
     [SerializeField] private float velocidad = 5f;
     [SerializeField] private float danio = 1;
     [SerializeField] private float tiempoDeVida = 2f;
+    private Transform jugador;
+
     void Start()
     {
-        GameObject jugador = GameObject.FindWithTag("Personaje");
+        jugador = GameObject.FindWithTag("Personaje").transform;
        
         //jugador.GetComponent<Vida_Pj>().TomarDanio(danio);
-        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,5 +29,22 @@ public class Bala : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * velocidad * Time.deltaTime);
+         if (jugador != null)
+        {
+            // Aquí puedes ajustar la velocidad según el estado del jugador
+            // Por ejemplo, si el jugador está moviéndose, podrías reducir la velocidad del enemigo
+            float velocidadNormal = 10f; // Velocidad normal del enemigo
+            float velocidadReducida = 5f; // Velocidad reducida cuando el jugador se mueve
+
+            Movimiento movimiento = jugador.GetComponent<Movimiento>();
+            if (movimiento != null && movimiento.estaMoviendo)
+            {
+                velocidad = velocidadReducida;
+            }
+            if (movimiento !=null && !movimiento.estaMoviendo)
+            {
+                velocidad = velocidadNormal;
+            }
+        }
     }
 }
