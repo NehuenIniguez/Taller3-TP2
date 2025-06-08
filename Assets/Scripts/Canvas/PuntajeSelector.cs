@@ -10,6 +10,8 @@ public class PuntajeSelector : MonoBehaviour
     {
         TMPro = GetComponent<TextMeshProUGUI>();
         puntos = FindAnyObjectByType<ControladorPuntos>();
+        ActualizarPuntos();
+        Debug.Log("Puntos Totales: " + puntos.puntosTotales);
     }
 
   public void ActualizarPuntos()

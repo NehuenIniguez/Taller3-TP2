@@ -11,6 +11,8 @@ public class win : MonoBehaviour
             panelVictoria.SetActive(true);
             Time.timeScale = 0;
             gane = true;
+
+             ControladorPuntos.instancia.AlmacenarPuntos(); 
         }
     }
 }

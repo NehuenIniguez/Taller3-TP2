@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Puntaje : MonoBehaviour
 {
-    private int puntos;
+    public int puntos;
     private TextMeshProUGUI TMPro;
     private GameObject personaje;
     void Start()
