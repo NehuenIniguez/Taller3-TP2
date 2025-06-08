@@ -4,16 +4,25 @@ using UnityEngine.UI;
 
 public class Puntaje : MonoBehaviour
 {
-    private int puntos = 0;
+    private int puntos;
     private TextMeshProUGUI TMPro;
+    private GameObject personaje;
     void Start()
     {
         TMPro = GetComponent<TextMeshProUGUI>();
+        personaje = GameObject.FindGameObjectWithTag("Personaje");
     }
 
     public void SumaPuntos(int cantidad)
     {
-        puntos += cantidad;
-        TMPro.text = puntos.ToString();    
+        if (personaje.GetComponent<Vida_Pj>().muerto == false)
+        {
+            puntos += cantidad;
+            TMPro.text = puntos.ToString();
+        }
+        if (personaje.GetComponent<Vida_Pj>().muerto == true)
+        {
+            puntos = 0;
+        }
     }
 }

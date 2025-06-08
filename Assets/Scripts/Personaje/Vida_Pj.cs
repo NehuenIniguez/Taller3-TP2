@@ -7,6 +7,7 @@ public class Vida_Pj : MonoBehaviour
     private float vidaActual;
     public GameObject panelMuerte;
     [SerializeField] private Transform spawn;
+    public bool muerto = false;
     
     void Start()
     {
@@ -23,6 +24,7 @@ public class Vida_Pj : MonoBehaviour
             Destroy(gameObject);
             panelMuerte.SetActive(true);
             Time.timeScale = 0;
+            muerto = true;
         }
     }
 }

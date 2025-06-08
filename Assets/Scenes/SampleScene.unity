@@ -1728,7 +1728,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7103176, y: 12.00937, z: -10}
+  m_LocalPosition: {x: -7.710309, y: 12.00937, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1766,6 +1766,37 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &542565733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542565734}
+  m_Layer: 0
+  m_Name: Puntuacion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &542565734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542565733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.70156777, y: -10.668383, z: 1.1297076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &556083166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5493,6 +5524,7 @@ MonoBehaviour:
   vidaMaxima: 3
   panelMuerte: {fileID: 454037012}
   spawn: {fileID: 333611346}
+  muerto: 0
 --- !u!50 &1505328576
 Rigidbody2D:
   serializedVersion: 5
@@ -6079,8 +6111,8 @@ GameObject:
   - component: {fileID: 1634987827}
   - component: {fileID: 1634987826}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Win
+  m_TagString: Win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7603,3 +7635,4 @@ SceneRoots:
   - {fileID: 963994916}
   - {fileID: 2115677120}
   - {fileID: 333611346}
+  - {fileID: 542565734}
