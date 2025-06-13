@@ -8,12 +8,13 @@ public class MovimientoCircular : MonoBehaviour
     public float radio = 2f;
     private float angulo = 0f;
     private float direccion = 1f;
+    public int danio = 2;
     private Transform jugadorTransform;
 
     void Start()
     {
         jugadorTransform = GameObject.FindWithTag("Personaje").transform;
-      
+
     }
     void Update()
     {
@@ -29,7 +30,7 @@ public class MovimientoCircular : MonoBehaviour
             {
                 velocidad = velocidadReducida;
             }
-            if (movimiento !=null && !movimiento.estaMoviendo)
+            if (movimiento != null && !movimiento.estaMoviendo)
             {
                 velocidad = velocidadNormal;
             }
@@ -42,6 +43,12 @@ public class MovimientoCircular : MonoBehaviour
             transform.position.z
         );
         transform.position = posicion;
-
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Personaje"))
+        {
+            other.GetComponent<Vida_Pj>().TomarDanio(danio);
+        }
     }
 }

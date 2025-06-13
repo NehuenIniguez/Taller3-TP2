@@ -5,10 +5,7 @@ public class CambioEscena : MonoBehaviour
 {
     public GameObject Opciones;
 
-    /*void Start()
-    {
-        GameObject puntos = GameObject.FindWithTag("Puntos");
-    }*/
+   
 
     public void volverMenu()
     {
@@ -19,7 +16,7 @@ public class CambioEscena : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelector");
         Time.timeScale = 1f;
-     }
+    }
     public void LevelUno()
     {
         SceneManager.LoadScene("SampleScene"); // O el nombre que tenga tu escena
@@ -27,8 +24,11 @@ public class CambioEscena : MonoBehaviour
     }
     public void LevelDos()
     {
-        SceneManager.LoadScene("Level2"); // O el nombre que tenga tu escena
-        Time.timeScale = 1f;
+        if (ControladorPuntos.instancia != null && ControladorPuntos.instancia.puntosTotales >= 36)
+        {
+            SceneManager.LoadScene("Level2"); // O el nombre que tenga tu escena
+            Time.timeScale = 1f;
+        }
     }
     public void LevelTres()
     {
@@ -45,9 +45,14 @@ public class CambioEscena : MonoBehaviour
         SceneManager.LoadScene("Level5"); // O el nombre que tenga tu escena
         Time.timeScale = 1f;
     }
-        public void LevelSeis()
-    { 
+    public void LevelSeis()
+    {
         SceneManager.LoadScene("Level6"); // O el nombre que tenga tu escena
+        Time.timeScale = 1f;
+    }
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial"); // O el nombre que tenga tu escena
         Time.timeScale = 1f;
     }
 }

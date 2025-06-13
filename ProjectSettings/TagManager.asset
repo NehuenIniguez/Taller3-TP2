@@ -8,6 +8,7 @@ TagManager:
   - Enemigo
   - Pared
   - Win
+  - Puntos
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,7 @@ public class ControladorPuntos : MonoBehaviour
         }
         else
         {
-            puntosTotales = 0;
+            puntosTotales += 0;
         }
     }
 
