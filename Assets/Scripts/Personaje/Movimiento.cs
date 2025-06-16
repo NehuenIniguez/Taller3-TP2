@@ -12,12 +12,14 @@ public class Movimiento : MonoBehaviour
     private Rigidbody2D rb;
     public bool estaMoviendo = false; // ← flag para enemigos
     public float duracionMovimiento = 0.3f; // cuanto tiempo "dura" el swipe
+    private Animator animator;
+    private bool enTransicion = false;
     
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-       
+        animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -35,6 +37,8 @@ public class Movimiento : MonoBehaviour
 
     void FixedUpdate()
     {
+       // if (enTransicion || estaMoviendo) return;
+
         Vector2 swipe = endTouchPosition - startTouchPosition;
 
         if (swipe.magnitude < 50f) return;
@@ -53,15 +57,36 @@ public class Movimiento : MonoBehaviour
 
         if (direction != Vector2.zero)
         {
-            Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
-            rb.MovePosition(nuevaPosicion);
+           // Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
+           // rb.MovePosition(nuevaPosicion);
 
             // Activo el flag para que los enemigos se muevan más lento
             estaMoviendo = true;
             CancelInvoke(nameof(DetenerMovimiento));
             Invoke(nameof(DetenerMovimiento), duracionMovimiento);
+
+           
+                StartCoroutine(AnimarYMover(direction));
+            
         }
 
+    }
+    private System.Collections.IEnumerator AnimarYMover(Vector2 direction)
+    {
+        enTransicion = true;
+        animator.SetTrigger("Transicion"); // ← animación previa
+
+        yield return new WaitForSeconds(0.5f); // duración de la animación de transición
+
+        Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
+        rb.MovePosition(nuevaPosicion);
+
+        estaMoviendo = true;
+        Invoke(nameof(DetenerMovimiento), duracionMovimiento);
+        enTransicion = false;
+
+        // Opcional: podés cambiar de estado a otra animación si querés
+        // animator.SetTrigger("Idle");
     }
     void DetenerMovimiento()
     {
