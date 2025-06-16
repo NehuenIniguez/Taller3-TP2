@@ -17,7 +17,7 @@ public class Recoloectables : MonoBehaviour
         {
             
             puntaje.SumaPuntos(puntos);
-            audioSource.PlayOneShot(sonido);
+            AudioSource.PlayClipAtPoint(sonido, transform.position);
             Destroy(gameObject);
             
         }
