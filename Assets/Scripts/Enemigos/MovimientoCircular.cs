@@ -26,11 +26,11 @@ public class MovimientoCircular : MonoBehaviour
             float velocidadReducida = 90f; // Velocidad reducida cuando el jugador se mueve
 
             Movimiento movimiento = jugadorTransform.GetComponent<Movimiento>();
-            if (movimiento != null && movimiento.estaMoviendo)
+            if (movimiento != null && movimiento.estaDeslizando)
             {
                 velocidad = velocidadReducida;
             }
-            if (movimiento != null && !movimiento.estaMoviendo)
+            if (movimiento != null && !movimiento.estaDeslizando)
             {
                 velocidad = velocidadNormal;
             }

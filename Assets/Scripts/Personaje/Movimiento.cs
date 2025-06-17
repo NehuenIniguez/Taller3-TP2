@@ -8,18 +8,16 @@ public class Movimiento : MonoBehaviour
     Le agrego que cuando el personaje se mueva la escena (en realidad los enemigos) se hagan mas lentos*/
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
-    public float movimientoDistancia = 5f; // Usá una unidad razonable, no 1500f
+    private float velocidadDeslizamiento = 20f;
     private Rigidbody2D rb;
-    public bool estaMoviendo = false; // ← flag para enemigos
-    public float duracionMovimiento = 0.3f; // cuanto tiempo "dura" el swipe
     private Animator animator;
-    private bool enTransicion = false;
-    
+    private Vector2 direccionActual = Vector2.zero;
+    public bool estaDeslizando = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
     }
 
     void Update()
@@ -29,69 +27,86 @@ public class Movimiento : MonoBehaviour
             Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
+            {
                 startTouchPosition = touch.position;
+
+                // Si ya se está deslizando y solo tocás la pantalla, frená
+                if (estaDeslizando)
+                {
+                    CancelarMovimiento();
+                    return;
+                }
+            }
             else if (touch.phase == TouchPhase.Ended)
+            {
                 endTouchPosition = touch.position;
+                Vector2 swipe = endTouchPosition - startTouchPosition;
+
+                if (swipe.magnitude > 50f) // Es swipe real
+                {
+                    swipe.Normalize();
+                    Vector2 nuevaDireccion = CalcularDireccion(swipe);
+
+                    if (nuevaDireccion != Vector2.zero)
+                    {
+                        direccionActual = nuevaDireccion;
+                        estaDeslizando = true;
+                        ActivarAnimacionDireccion(nuevaDireccion);
+                    }
+                }
+            }
         }
     }
 
     void FixedUpdate()
     {
-       // if (enTransicion || estaMoviendo) return;
-
-        Vector2 swipe = endTouchPosition - startTouchPosition;
-
-        if (swipe.magnitude < 50f) return;
-
-        swipe.Normalize();
-        Vector2 direction = Vector2.zero;
-
-        if (Vector2.Dot(swipe, Vector2.up) > 0.7f)
-            direction = Vector2.up;
-        else if (Vector2.Dot(swipe, Vector2.down) > 0.7f)
-            direction = Vector2.down;
-        else if (Vector2.Dot(swipe, Vector2.left) > 0.7f)
-            direction = Vector2.left;
-        else if (Vector2.Dot(swipe, Vector2.right) > 0.7f)
-            direction = Vector2.right;
-
-        if (direction != Vector2.zero)
+        if (estaDeslizando)
         {
-           // Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
-           // rb.MovePosition(nuevaPosicion);
-
-            // Activo el flag para que los enemigos se muevan más lento
-            estaMoviendo = true;
-            CancelInvoke(nameof(DetenerMovimiento));
-            Invoke(nameof(DetenerMovimiento), duracionMovimiento);
-
-           
-                StartCoroutine(AnimarYMover(direction));
-            
+            Vector2 nuevaPos = rb.position + direccionActual * velocidadDeslizamiento * Time.fixedDeltaTime;
+            rb.MovePosition(nuevaPos);
         }
-
     }
-    private System.Collections.IEnumerator AnimarYMover(Vector2 direction)
+
+    void CancelarMovimiento()
     {
-        enTransicion = true;
-        animator.SetTrigger("Transicion"); // ← animación previa
-
-        yield return new WaitForSeconds(0.5f); // duración de la animación de transición
-
-        Vector2 nuevaPosicion = rb.position + direction * movimientoDistancia * Time.fixedDeltaTime;
-        rb.MovePosition(nuevaPosicion);
-
-        estaMoviendo = true;
-        Invoke(nameof(DetenerMovimiento), duracionMovimiento);
-        enTransicion = false;
-
-        // Opcional: podés cambiar de estado a otra animación si querés
-        // animator.SetTrigger("Idle");
+        estaDeslizando = false;
+        direccionActual = Vector2.zero;
+        animator.SetTrigger("Idle");
     }
-    void DetenerMovimiento()
+
+    Vector2 CalcularDireccion(Vector2 swipe)
     {
-        estaMoviendo = false;
+        if (Vector2.Dot(swipe, Vector2.up) > 0.7f)
+            return Vector2.up;
+        else if (Vector2.Dot(swipe, Vector2.down) > 0.7f)
+            return Vector2.down;
+        else if (Vector2.Dot(swipe, Vector2.left) > 0.7f)
+            return Vector2.left;
+        else if (Vector2.Dot(swipe, Vector2.right) > 0.7f)
+            return Vector2.right;
+
+        return Vector2.zero;
     }
+
+    void ActivarAnimacionDireccion(Vector2 direction)
+    {
+        // Usamos dot product para saber dirección principal
+        if (Vector2.Dot(direction, Vector2.right) > 0.9f)
+            animator.SetTrigger("Derecha");
+        else if (Vector2.Dot(direction, Vector2.left) > 0.9f)
+            animator.SetTrigger("Izquierda");
+        else if (Vector2.Dot(direction, Vector2.up) > 0.9f)
+            animator.SetTrigger("Arriba");
+        else if (Vector2.Dot(direction, Vector2.down) > 0.9f)
+            animator.SetTrigger("Abajo");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Si toca algo, se frena
+        CancelarMovimiento();
+    }
+  
 
 
 }
