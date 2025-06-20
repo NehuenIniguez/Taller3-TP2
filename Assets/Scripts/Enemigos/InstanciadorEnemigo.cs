@@ -8,6 +8,11 @@ public class InstanciadorEnemigo : MonoBehaviour
 
     private bool enemigoInstanciado = false;
 
+    void Start()
+    {
+        detector = FindAnyObjectByType<InactividadDetector>();
+        
+    }
     void Update()
     {
         if (detector != null && detector.inactivo && !enemigoInstanciado)

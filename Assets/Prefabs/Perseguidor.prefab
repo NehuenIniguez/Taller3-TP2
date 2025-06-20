@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8887347079660843288}
   - component: {fileID: 4848673726470700713}
   - component: {fileID: 5767545898871015815}
+  - component: {fileID: 5720145995319821860}
+  - component: {fileID: 2006589994530570264}
   m_Layer: 0
   m_Name: Perseguidor
   m_TagString: Untagged
@@ -124,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a69fa550c48b0145bea05c420f16461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8661034880952575025, guid: 6b484970b47de5b4d9562225f05e3949, type: 3}
+  rangoMovimiento: 10
 --- !u!61 &5767545898871015815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +173,51 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!58 &5720145995319821860
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224017910513112673}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.06049061, y: 1.3173227}
+  m_Radius: 7.5628443
+--- !u!114 &2006589994530570264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224017910513112673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849c608d70c1bbc46a68ae23e7a945bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

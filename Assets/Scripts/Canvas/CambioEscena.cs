@@ -5,8 +5,6 @@ public class CambioEscena : MonoBehaviour
 {
     public GameObject Opciones;
 
-   
-
     public void volverMenu()
     {
         SceneManager.LoadScene("Menu");
