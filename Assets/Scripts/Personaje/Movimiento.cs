@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Movimiento : MonoBehaviour
@@ -30,7 +31,6 @@ public class Movimiento : MonoBehaviour
             {
                 startTouchPosition = touch.position;
 
-                // Si ya se está deslizando y solo tocás la pantalla, frená
                 if (estaDeslizando)
                 {
                     CancelarMovimiento();
@@ -42,20 +42,29 @@ public class Movimiento : MonoBehaviour
                 endTouchPosition = touch.position;
                 Vector2 swipe = endTouchPosition - startTouchPosition;
 
-                if (swipe.magnitude > 50f) // Es swipe real
+                if (swipe.magnitude > 50f)
                 {
                     swipe.Normalize();
                     Vector2 nuevaDireccion = CalcularDireccion(swipe);
 
                     if (nuevaDireccion != Vector2.zero)
                     {
-                        direccionActual = nuevaDireccion;
-                        estaDeslizando = true;
-                        ActivarAnimacionDireccion(nuevaDireccion);
+                        StartCoroutine(AnimacionTransicionYDeslizamiento(nuevaDireccion));
                     }
                 }
             }
         }
+    }
+
+    IEnumerator AnimacionTransicionYDeslizamiento(Vector2 direccion)
+    {
+        animator.SetTrigger("Transicion");
+
+        yield return new WaitForSeconds(0.2f); // tiempo para la transición
+
+        direccionActual = direccion;
+        estaDeslizando = true;
+        ActivarAnimacionDireccion(direccion);
     }
 
     void FixedUpdate()
@@ -90,7 +99,6 @@ public class Movimiento : MonoBehaviour
 
     void ActivarAnimacionDireccion(Vector2 direction)
     {
-        // Usamos dot product para saber dirección principal
         if (Vector2.Dot(direction, Vector2.right) > 0.9f)
             animator.SetTrigger("Derecha");
         else if (Vector2.Dot(direction, Vector2.left) > 0.9f)
@@ -103,10 +111,7 @@ public class Movimiento : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si toca algo, se frena
         CancelarMovimiento();
     }
-  
-
 
 }

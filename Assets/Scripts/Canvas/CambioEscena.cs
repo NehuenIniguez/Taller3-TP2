@@ -30,23 +30,35 @@ public class CambioEscena : MonoBehaviour
     }
     public void LevelTres()
     {
-        SceneManager.LoadScene("Level3"); // O el nombre que tenga tu escena
-        Time.timeScale = 1f;
+        if (ControladorPuntos.instancia != null && ControladorPuntos.instancia.puntosTotales >= 61)
+        {
+            SceneManager.LoadScene("Level3"); // O el nombre que tenga tu escena
+            Time.timeScale = 1f;
+        }
     }
     public void LevelCuatro()
     {
-        SceneManager.LoadScene("Level4"); // O el nombre que tenga tu escena
-        Time.timeScale = 1f;
+        if (ControladorPuntos.instancia != null && ControladorPuntos.instancia.puntosTotales >= 114)
+        {
+            SceneManager.LoadScene("Level4"); // O el nombre que tenga tu escena
+            Time.timeScale = 1f;
+        }
     }
     public void LevelCinco()
     {
-        SceneManager.LoadScene("Level5"); // O el nombre que tenga tu escena
-        Time.timeScale = 1f;
+        if (ControladorPuntos.instancia != null && ControladorPuntos.instancia.puntosTotales >= 217)
+        {
+            SceneManager.LoadScene("Level5"); // O el nombre que tenga tu escena
+            Time.timeScale = 1f;
+        }
     }
     public void LevelSeis()
     {
-        SceneManager.LoadScene("Level6"); // O el nombre que tenga tu escena
-        Time.timeScale = 1f;
+        if (ControladorPuntos.instancia != null && ControladorPuntos.instancia.puntosTotales >= 407)
+        {
+            SceneManager.LoadScene("Level6"); // O el nombre que tenga tu escena
+            Time.timeScale = 1f;
+        }
     }
     public void Tutorial()
     {
