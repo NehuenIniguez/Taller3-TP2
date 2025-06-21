@@ -7,12 +7,13 @@ public class Bala : MonoBehaviour
     [SerializeField] private float tiempoDeVida = 2f;
     private Transform jugador;
     private float velocidadActual;
+    [SerializeField] private GameObject explosion;
     void Start()
     {
         jugador = GameObject.FindWithTag("Personaje").transform;
         velocidadActual = velocidad;
         //jugador.GetComponent<Vida_Pj>().TomarDanio(danio);
-        Destroy(gameObject, tiempoDeVida);
+        Invoke (nameof(Explosion), tiempoDeVida);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -20,17 +21,17 @@ public class Bala : MonoBehaviour
         if (other.CompareTag("Personaje"))
         {
             other.GetComponent<Vida_Pj>().TomarDanio(danio);
-            Destroy(gameObject);
+            Explosion();
         }
         if (other.CompareTag("Pared"))
         {
-            Destroy(gameObject);
+            Explosion();
         }
     }
     void Update()
     {
         transform.Translate(Vector2.right * velocidad * Time.deltaTime);
-         if (jugador != null)
+        if (jugador != null)
         {
             // Aquí puedes ajustar la velocidad según el estado del jugador
             // Por ejemplo, si el jugador está moviéndose, podrías reducir la velocidad del enemigo
@@ -42,10 +43,20 @@ public class Bala : MonoBehaviour
             {
                 velocidad = velocidadReducida;
             }
-            if (movimiento !=null && !movimiento.estaDeslizando)
+            if (movimiento != null && !movimiento.estaDeslizando)
             {
                 velocidad = velocidadNormal;
             }
         }
     }
+
+    void Explosion()
+    {
+        if (explosion != null)
+        {
+            GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(explosionInstance, 1f); // Destruye la explosión después de 1 segundo
+        }
+        Destroy(gameObject);
+     }
 }

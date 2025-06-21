@@ -15,6 +15,8 @@ public class Movimiento : MonoBehaviour
     private Vector2 direccionActual = Vector2.zero;
     public bool estaDeslizando = false;
 
+    [SerializeField] private ParticleSystem particle;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +48,7 @@ public class Movimiento : MonoBehaviour
                 {
                     swipe.Normalize();
                     Vector2 nuevaDireccion = CalcularDireccion(swipe);
+                    particle.Play();
 
                     if (nuevaDireccion != Vector2.zero)
                     {

@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class Recoloectables : MonoBehaviour
+public class RecolectablesTuto : MonoBehaviour
 {
     public int puntos = 1;
-    [SerializeField] private Puntaje puntaje;
+    
     [SerializeField] private PuntoTutorial puntoTutorial;
 
     private AudioSource audioSource;
@@ -27,7 +27,6 @@ public class Recoloectables : MonoBehaviour
     private IEnumerator Recolectar()
     {
         animator.SetTrigger("Recolectado");
-        puntaje.SumaPuntos(puntos);
         puntoTutorial.SumaPuntos(puntos); 
         AudioSource.PlayClipAtPoint(sonido, transform.position);
         

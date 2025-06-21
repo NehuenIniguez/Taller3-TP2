@@ -17,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Pared
-  - 
+  - Jugador
   - 
   - 
   - 
@@ -45,6 +45,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Jugador
+    uniqueID: 1158897675
+    locked: 0
+  - name: ui
+    uniqueID: 206662443
     locked: 0
   m_RenderingLayers:
   - Default

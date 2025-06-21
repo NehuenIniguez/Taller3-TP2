@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5808751018053249175}
   serializedVersion: 2
   m_LocalRotation: {x: -0.008726225, y: -0.9999238, z: 0.008726225, w: -0.0000761528}
-  m_LocalPosition: {x: -2.37, y: 0.58, z: -0.08}
+  m_LocalPosition: {x: -1.3, y: 0.21, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8334216039034184360}
   - component: {fileID: 981113457432082915}
   - component: {fileID: 8151680601008361855}
+  - component: {fileID: 5119263627154430982}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemigo
@@ -110,9 +111,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_FlipX: 1
+  m_Sprite: {fileID: 5171728975412597029, guid: 63ecaf742a70741488963b6f5be55eee, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -159,7 +160,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.2083334, y: 1.0833334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -183,3 +184,25 @@ MonoBehaviour:
   Bala: {fileID: 4853956291573564907, guid: 3fd6185d4ba1cca4f83d7850d3db2eb4, type: 3}
   tiempoEntreDisapro: 1
   velocidad: 10
+--- !u!95 &5119263627154430982
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599717612376842867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2884d074998a82448f31989d0ec8f47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
