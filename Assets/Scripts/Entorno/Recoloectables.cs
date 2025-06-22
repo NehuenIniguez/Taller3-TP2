@@ -5,7 +5,6 @@ public class Recoloectables : MonoBehaviour
 {
     public int puntos = 1;
     [SerializeField] private Puntaje puntaje;
-    [SerializeField] private PuntoTutorial puntoTutorial;
 
     private AudioSource audioSource;
     public AudioClip sonido;
@@ -27,8 +26,7 @@ public class Recoloectables : MonoBehaviour
     private IEnumerator Recolectar()
     {
         animator.SetTrigger("Recolectado");
-        puntaje.SumaPuntos(puntos);
-        puntoTutorial.SumaPuntos(puntos); 
+        puntaje.SumaPuntos(puntos); 
         AudioSource.PlayClipAtPoint(sonido, transform.position);
         
         yield return new WaitForSeconds(0.5f); // Espera antes de destruir
