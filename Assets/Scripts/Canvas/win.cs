@@ -12,7 +12,7 @@ public class win : MonoBehaviour
             Time.timeScale = 0;
             gane = true;
 
-             ControladorPuntos.instancia.AlmacenarPuntos(); 
+            ControladorPuntos.instancia.AlmacenarPuntos(); 
         }
     }
 }

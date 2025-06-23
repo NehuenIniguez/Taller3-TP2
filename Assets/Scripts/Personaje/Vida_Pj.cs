@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,13 @@ public class Vida_Pj : MonoBehaviour
     public GameObject panelMuerte;
     [SerializeField] private Transform spawn;
     public bool muerto = false;
+    private AudioSource audioSource;
+    [ SerializeField] public AudioClip sonidoMuerte;
 
     void Start()
     {
         vidaActual = vidaMaxima;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -24,10 +28,7 @@ public class Vida_Pj : MonoBehaviour
         transform.position = spawn.position;
         if (vidaActual <= 0)
         {
-            Destroy(gameObject);
-            panelMuerte.SetActive(true);
-            Time.timeScale = 0;
-            muerto = true;
+            StartCoroutine(SonidoMuerte());
         }
     }
     private void ActualizarVida()
@@ -43,5 +44,18 @@ public class Vida_Pj : MonoBehaviour
                 vida[i].enabled = false;
             }
         }
+    }
+
+    private IEnumerator SonidoMuerte()
+    {
+        Time.timeScale = 0;
+        audioSource.PlayOneShot(sonidoMuerte);
+       
+        yield return new WaitForSecondsRealtime(sonidoMuerte.length);
+        
+        Destroy(gameObject);
+        panelMuerte.SetActive(true);
+        
+        muerto = true;
     }
 }

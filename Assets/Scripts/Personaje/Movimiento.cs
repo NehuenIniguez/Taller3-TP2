@@ -9,7 +9,7 @@ public class Movimiento : MonoBehaviour
     Le agrego que cuando el personaje se mueva la escena (en realidad los enemigos) se hagan mas lentos*/
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
-    private float velocidadDeslizamiento = 20f;
+    private float velocidadDeslizamiento = 25f;
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 direccionActual = Vector2.zero;

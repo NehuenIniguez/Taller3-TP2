@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba6242f4bcf8924d9aa2a07019cfb55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
+  velocidad: 7
   danio: 1
-  tiempoDeVida: 2
+  tiempoDeVida: 10
   explosion: {fileID: 7941460228899970115, guid: bc398628deb4eb741a07bfe3dc5df19f, type: 3}
 --- !u!50 &5298825027101045398
 Rigidbody2D:

@@ -637,7 +637,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1791,6 +1791,63 @@ MonoBehaviour:
   puntos: 1
   puntoTutorial: {fileID: 1225555154}
   sonido: {fileID: 8300000, guid: 8ce2716f0aa41a64f8711b9112b8f499, type: 3}
+--- !u!1001 &750890193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1953026797525647071, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_Name
+      value: Audio Source
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.805616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.63729
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 488.04697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114478369120650861, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 060b04cee9ea0b64e8c13b2bb6e068c4, type: 3}
 --- !u!1001 &774277968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1922,8 +1979,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1950,7 +2007,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 2.52
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2393,8 +2450,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -28295,7 +28352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1220774696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30213,11 +30270,11 @@ PrefabInstance:
       objectReference: {fileID: 1220774695}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4877996
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44286776
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30225,7 +30282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30237,7 +30294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30249,7 +30306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1827740031866882985, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3746579764344470789, guid: 2b561defbd5a97648a57a19a83fafb3d, type: 3}
       propertyPath: m_Name
@@ -31601,11 +31658,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 4.23
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -32314,3 +32371,4 @@ SceneRoots:
   - {fileID: 827349359}
   - {fileID: 34290507}
   - {fileID: 470131943}
+  - {fileID: 750890193}
